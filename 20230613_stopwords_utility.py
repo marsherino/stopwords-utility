@@ -5,11 +5,13 @@ def removestops(textfile, stopfile):
         textstring = fulltext.readlines()
         textstring = ''.join(textstring)
         textstring = textstring.lower()
+        #This part strips the punctuation
         textstring = textstring.translate(str.maketrans('', '', string.punctuation))
         textstring = textstring.split()
         stopstring = stopwords.readlines()
         stopstring = ''.join(stopstring)
         stopstring = stopstring.split()
+        #This part does the actual removal
         filtered = [t for t in textstring if t.lower() not in stopstring]
     writefile = open('cleanedfile.txt', 'w')
     writefile.writelines([str(i)+'\n' for i in filtered])
