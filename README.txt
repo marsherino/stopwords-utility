@@ -1,0 +1,7 @@
+This is a small utility meant to remove "stop words," synatactically necessary but insubstantive words, from plain text files in order to prepare them for text analysis. I had in mind tools like Andrew McCallum's MALLET (https://mimno.github.io/Mallet/index) and Voyant (https://voyant-tools.org/), but it can be used for a variety of purposes, and can also be used generally to remove a given set of words from any plain text file. It also strips punctuation from the file.
+
+When using the utility, make sure both the text you want to clean and your list of stop words are both in plain text .txt format. Make sure your list of stop words includes only one word per line with a return between each. The program will save the completed document into a file named cleanedfile.txt, which will return the entire body of the text in a single column (one word per line with a return between each) with all punctuation stripped and all stop words removed. The program will overwrite this file on each use, so make sure to either move your finished file to a different location or rename it when complete.
+
+This program was built off of William J. Turkel's method of removing stop words (https://perma.cc/SYZ5-NUS6).
+
+A compilation of lists of English stop words can be found at https://github.com/igorbrigadir/stopwords.
